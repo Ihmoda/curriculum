@@ -6,7 +6,7 @@
 
 const solution = (arr, idx=1, counterObject={}, mostCommon=arr[0])=>{
 
-  if (Object.keys(counterObject).length === 0) counterObject[arr[0]] = 1
+  if (idx === 1) counterObject[arr[0]] = 1
 
   if (idx === arr.length) return mostCommon
 

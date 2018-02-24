@@ -15,15 +15,6 @@ const solution = (obj, keys = Object.keys(obj), idx = 1, max=obj[keys[0]]) => {
 
 };
 
-const my_obj = {
-  first: 100,
-  second: 200,
-  third: 400,
-  fourth: 5000,
-  sixth: 0,
-};
-
-console.log(solution(my_obj));
 
 module.exports = {
   solution,

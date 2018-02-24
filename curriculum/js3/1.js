@@ -5,7 +5,7 @@
  */
 
 const solution = (obj, keys = Object.keys(obj), idx = 1, max=obj[keys[0]]) => {
-  let key = keys[idx]
+  const key = keys[idx]
 
   if(idx === keys.length) return max;
 

@@ -4,8 +4,17 @@
  * @return {array} b
  */
 
-const solution = (a)=>{
-  return b;
+const solution = (a, idx=1, countObject={}, result=[])=>{
+  if(idx === a.length) return result
+  if(idx === 1) countObject[a[0]] === 1;
+
+  countObject[a[idx]] = a[idx] in countObject ? countObject[a[idx]] + 1 : 1
+
+  if(countObject[a[idx]] === 1){
+    result.push(a[idx]);
+  }
+
+  return solution(a, idx +1, countObject, result);
 }
 
 module.exports = {

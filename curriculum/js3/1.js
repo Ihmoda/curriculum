@@ -4,10 +4,10 @@
  * @returns {number} max
  */
 
-const solution = (obj, keys = Object.keys(obj), idx = 1, max=obj[keys[0]]) => {
+const solution = (obj={}, keys = Object.keys(obj), idx = 1, max=obj[keys[0]]) => {
   const key = keys[idx]
 
-  if(idx === keys.length) return max;
+  if(idx === keys.length || Object.getOwnPropertyNames(obj).length === 0) return max;
 
   if(obj[key] > max) max = obj[key];
 

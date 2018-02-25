@@ -5,9 +5,16 @@
  * @return {nothing}
  **/
 
-const solution = (a,b)=>{
-  return;
+const solution = (a=[],b, keys=Object.keys(a), idx=0)=>{
+  if (idx === keys.length) return
+
+  b(keys[idx], a[keys[idx]]);
+
+  solution(a, b, keys, idx + 1);
+
 }
+
+
 module.exports = {
   solution
 }

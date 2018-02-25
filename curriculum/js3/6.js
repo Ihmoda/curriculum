@@ -9,8 +9,8 @@
  * @returns {object} c
 */
 
-const solution = (a, b, keys = Object.keys(a), idx = 0, filteredResult = {}) => {
-  if (idx === keys.length) {
+const solution = (a = {}, b, keys = Object.keys(a), idx = 0, filteredResult = {}) => {
+  if (idx === keys.length || Object.getOwnPropertyNames(a).length === 0) {
     return filteredResult;
   }
 
@@ -20,6 +20,7 @@ const solution = (a, b, keys = Object.keys(a), idx = 0, filteredResult = {}) => 
 
   return solution(a, b, keys, idx + 1, filteredResult);
 };
+
 module.exports = {
   solution
 };

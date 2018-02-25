@@ -6,9 +6,19 @@
  * @returns {boolean}
  */
 
-const solution = (a,b)=>{
-  return boolean;
+const solution = (a=[],b=0, idx=0, countObject={})=> {
+  const difference = b - a[idx]
+
+  if (idx === a.length) return false
+
+  if(difference in countObject) return true
+
+  countObject[a[idx]] = true
+
+  return solution(a, b, idx+1, countObject);
+
 }
+
 
 module.exports = {
   solution
